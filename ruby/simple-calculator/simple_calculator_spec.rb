@@ -19,23 +19,23 @@ RSpec.describe SimpleCalculator do
     end
 
     it 'raises ArgumentError if first operand is not a number' do
-      expect{ described_class.calculate('1', 2, '+') }.to raise_error(ArgumentError)
+      expect { described_class.calculate('1', 2, '+') }.to raise_error(ArgumentError)
     end
 
     it 'raises ArguementError if second operand is not a number' do
-      expect{ described_class.calculate(1, '2', '+') }.to raise_error(ArgumentError)
+      expect { described_class.calculate(1, '2', '+') }.to raise_error(ArgumentError)
     end
 
     it 'raises UnsupportedOperation for non valid operations' do
-      expect{ described_class.calculate(1, 2, '**') }.to raise_error(SimpleCalculator::UnsupportedOperation)
+      expect { described_class.calculate(1, 2, '**') }.to raise_error(SimpleCalculator::UnsupportedOperation)
     end
 
     it 'raises UnsupportedOperation for non valid operations' do
-      expect{ described_class.calculate(1, 2, nil) }.to raise_error(SimpleCalculator::UnsupportedOperation)
+      expect { described_class.calculate(1, 2, nil) }.to raise_error(SimpleCalculator::UnsupportedOperation)
     end
 
     it 'raises UnsupportedOperation for non valid operations' do
-      expect{ described_class.calculate(1, 2, '') }.to raise_error(SimpleCalculator::UnsupportedOperation)
+      expect { described_class.calculate(1, 2, '') }.to raise_error(SimpleCalculator::UnsupportedOperation)
     end
   end
 end

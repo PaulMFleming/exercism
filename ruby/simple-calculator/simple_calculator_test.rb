@@ -15,7 +15,7 @@ class SimpleCalculatorTest < Minitest::Test
   end
 
   def test_rescues_division_by_0_exception
-    assert_equal "Division by zero is not allowed.", SimpleCalculator.calculate(33, 0, "/")
+    assert_equal 'Division by zero is not allowed.', SimpleCalculator.calculate(33, 0, '/')
   end
 
   def test_no_number_first_operand_raises_exception
