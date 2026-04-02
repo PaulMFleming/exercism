@@ -1,5 +1,7 @@
 class SimpleCalculator
   ALLOWED_OPERATIONS = ['+', '/', '*'].freeze
+  class UnsupportedOperation < StandardError
+  end
 
   def self.calculate(first_operand, second_operand, operation)
     raise(ArgumentError) unless first_operand.is_a?(Integer) && second_operand.is_a?(Integer)
@@ -20,5 +22,4 @@ class SimpleCalculator
   end
 end
 
-class UnsupportedOperation < StandardError
-end
+

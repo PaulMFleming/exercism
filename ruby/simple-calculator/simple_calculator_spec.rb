@@ -27,15 +27,15 @@ RSpec.describe SimpleCalculator do
     end
 
     it 'raises UnsupportedOperation for non valid operations' do
-      expect{ described_class.calculate(1, 2, '**') }.to raise_error(UnsupportedOperation)
+      expect{ described_class.calculate(1, 2, '**') }.to raise_error(SimpleCalculator::UnsupportedOperation)
     end
 
     it 'raises UnsupportedOperation for non valid operations' do
-      expect{ described_class.calculate(1, 2, nil) }.to raise_error(UnsupportedOperation)
+      expect{ described_class.calculate(1, 2, nil) }.to raise_error(SimpleCalculator::UnsupportedOperation)
     end
 
     it 'raises UnsupportedOperation for non valid operations' do
-      expect{ described_class.calculate(1, 2, '') }.to raise_error(UnsupportedOperation)
+      expect{ described_class.calculate(1, 2, '') }.to raise_error(SimpleCalculator::UnsupportedOperation)
     end
   end
 end
